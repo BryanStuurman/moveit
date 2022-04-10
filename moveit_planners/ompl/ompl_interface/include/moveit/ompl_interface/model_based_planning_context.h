@@ -46,6 +46,10 @@
 #include <ompl/tools/multiplan/ParallelPlan.h>
 #include <ompl/base/StateStorage.h>
 
+// Added by Gabriel Koenig to add Data Storage capabilities
+#include <ompl/base/PlannerData.h>
+#include <ompl/base/PlannerDataStorage.h>
+
 namespace ompl_interface
 {
 namespace ob = ompl::base;

@@ -127,4 +127,15 @@ void PlannerManager::terminate() const
     context->terminate();
 }
 
+// Added by Gabriel Koenig to visualize sampled states
+void PlannerManager::visualizeSampledStates(const planning_scene::PlanningSceneConstPtr& planning_scene,
+                                            const std::string& PLANNING_GROUP,
+                                            const std::string& LINK_NAME,
+                                            const std::string& REFERENCE_FRAME,
+                                            const std::string& state_space_model,
+                                            const char *filename_to_load)
+{
+  // nothin by default, at the moment only implemented for the OMPL planner;
+}
+
 }  // end of namespace planning_interface
