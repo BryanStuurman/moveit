@@ -160,6 +160,16 @@ public:
                               const std::string& state_space_model,
                               const char *filename_to_load)  override
   {
+
+    //Set log level to DEBUG, because we're gonna need all the help we can get.
+    if( ros::console::set_logger_level(ROSCONSOLE_DEFAULT_NAME, ros::console::levels::Debug) ) 
+    {
+      ros::console::notifyLoggerLevelsChanged();
+    }
+    std::cout<<"[visualizeSampledStates] cout test"<<std::endl;
+    ROS_DEBUG("[visualizeSampledStates] debug test");
+    ROS_INFO("[visualizeSampledStates] info test");
+
     // get current planning context for the specified Planning Group
     //fix for latest moveit
     planning_interface::MotionPlanRequest req;
